@@ -2,6 +2,7 @@
 
 An interactive public health dashboard tracking COVID-19 trends across 200+ countries, built with Python and Streamlit. Data is pulled live from Our World in Data's open COVID-19 dataset.
 
+**[Live Dashboard](https://covid-dashboard-b5rb4hducukvnm7snjnbmn.streamlit.app/)**
 
 ## Key findings
 
