@@ -54,7 +54,7 @@ metric_option = st.selectbox(
 fig1 = px.line(world, x='date', y=metric_option, 
                title=f'Global {metric_option.replace("_", " ")} over time')
 fig1.update_layout(height=400)
-st.plotly_chart(fig1, use_container_width=True)
+st.plotly_chart(fig1, width='stretch')
 
 st.divider()
 
@@ -79,7 +79,7 @@ if selected_countries:
                    color='location',
                    title=f'{compare_metric.replace("_", " ")} by country')
     fig2.update_layout(height=400)
-    st.plotly_chart(fig2, use_container_width=True)
+    st.plotly_chart(fig2, width='stretch')
 
 st.divider()
 
@@ -102,7 +102,7 @@ with col3:
 fig3 = px.bar(country_data, x='date', y='new_cases_smoothed',
               title=f'{selected_country} - daily new cases')
 fig3.update_layout(height=350)
-st.plotly_chart(fig3, use_container_width=True)
+st.plotly_chart(fig3, width='stretch')
 
 st.divider()
 
@@ -113,4 +113,4 @@ top20 = latest.nlargest(20, 'total_cases')[
      'people_vaccinated_per_hundred']
 ].round(1)
 top20.columns = ['Country', 'Total Cases', 'Total Deaths', 'Vaccinated (%)']
-st.dataframe(top20, use_container_width=True, hide_index=True)
+st.dataframe(top20, width='stretch', hide_index=True)
